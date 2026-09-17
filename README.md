@@ -7,6 +7,8 @@ Built with **Jekyll**, which GitHub Pages compiles automatically. You never
 need to build anything locally: commit a file, push, and the site rebuilds in
 about a minute.
 
+AI Disclosure: This site is based off of proofsandprompts.com, and was built using Claude.
+
 ---
 
 ## Before launch: the checklist
