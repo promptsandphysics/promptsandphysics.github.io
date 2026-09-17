@@ -1,0 +1,11 @@
+# The people running the site. Shown at the bottom of /about/.
+# EDIT THIS — the entry below is a stub, not a bio you have approved.
+
+- name: Charlie Cummings
+  role: Theoretical physicist
+  affiliation: ""            # add your institution
+  bio: >-
+    I work on quantum gravity and AdS/CFT. REPLACE THIS TEXT with a few
+    sentences in your own words: what you work on, and how you came to think
+    this conversation was worth hosting. The other editors' entries follow the
+    same shape — copy the block above to add one.

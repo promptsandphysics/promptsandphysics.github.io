@@ -1,0 +1,19 @@
+<header class="masthead">
+  <div class="wrap masthead-inner">
+    <div class="wordmark">
+      <a href="{{ '/' | relative_url }}">{{ site.title }}</a>
+      <p class="tagline">{{ site.tagline }}</p>
+    </div>
+
+    <nav class="nav" aria-label="Main">
+      {%- assign nav_items = "posts,Posts|submit,Submit|newsfeed,Newsfeed|contributors,Contributors|about,About" | split: "|" -%}
+      {%- for item in nav_items -%}
+        {%- assign parts = item | split: "," -%}
+        {%- assign slug = parts[0] -%}
+        {%- assign href = slug | prepend: "/" | append: "/" -%}
+        <a href="{{ href | relative_url }}"
+           {% if page.url contains href %}aria-current="page"{% endif %}>{{ parts[1] }}</a>
+      {%- endfor -%}
+    </nav>
+  </div>
+</header>

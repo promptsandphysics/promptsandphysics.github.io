@@ -1,0 +1,19 @@
+<footer class="site-footer">
+  <div class="wrap">
+    <p class="footer-line">
+      <strong>{{ site.title }}</strong> &middot; {{ site.tagline }}
+    </p>
+    <p class="footer-meta">
+      <a href="{{ '/submit/' | relative_url }}">Submit a post</a>
+      <span aria-hidden="true">&middot;</span>
+      <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+      {%- if site.github_repo %}
+      <span aria-hidden="true">&middot;</span>
+      <a href="https://github.com/{{ site.github_repo }}">Source</a>
+      {%- endif %}
+    </p>
+    <p class="footer-meta">
+      Posts are the work of their named authors. Views are their own.
+    </p>
+  </div>
+</footer>

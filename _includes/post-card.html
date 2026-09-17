@@ -1,0 +1,14 @@
+<article class="post-card">
+  <p class="post-meta">
+    <time datetime="{{ include.post.date | date_to_xmlschema }}">{{ include.post.date | date: "%-d %b %Y" }}</time>
+    {%- if include.post.sample %}<span class="flag-sample">sample</span>{% endif -%}
+  </p>
+  <h2 class="post-card-title">
+    <a href="{{ include.post.url | relative_url }}">{{ include.post.title }}</a>
+  </h2>
+  <p class="byline">by {{ include.post.author | default: "Anonymous" }}</p>
+  {%- if include.post.excerpt_override -%}
+    <p class="card-excerpt">{{ include.post.excerpt_override }}</p>
+  {%- endif -%}
+  {% include taglist.html tags=include.post.tags %}
+</article>

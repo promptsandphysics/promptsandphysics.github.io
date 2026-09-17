@@ -1,0 +1,39 @@
+---
+layout: page
+title: Contributors
+permalink: /contributors/
+subtitle: Everyone who has written here. Generated automatically from the posts.
+---
+{%- assign posts_by_author = site.posts | group_by: "author" | sort: "name" -%}
+
+{%- if posts_by_author.size > 0 -%}
+<div class="contributors">
+  {%- for group in posts_by_author -%}
+  <section class="contributor">
+    <h2 class="contributor-name">
+      {%- assign first = group.items | first -%}
+      {%- if first.author_url -%}
+        <a href="{{ first.author_url }}">{{ group.name }}</a>
+      {%- else -%}
+        {{ group.name }}
+      {%- endif -%}
+    </h2>
+    {%- if first.affiliation or first.career_stage -%}
+    <p class="contributor-meta">
+      {{ first.career_stage }}{% if first.career_stage and first.affiliation %}, {% endif %}{{ first.affiliation }}
+    </p>
+    {%- endif -%}
+    <ul class="contributor-posts">
+      {%- for post in group.items -%}
+      <li>
+        <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: "%-d %b %Y" }}</time>
+        <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+      </li>
+      {%- endfor -%}
+    </ul>
+  </section>
+  {%- endfor -%}
+</div>
+{%- else -%}
+<p class="empty">No contributors yet.</p>
+{%- endif -%}

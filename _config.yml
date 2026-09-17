@@ -1,0 +1,65 @@
+# ---------------------------------------------------------------------------
+# Site settings. Edit the values in this block; everything below it is wiring.
+# ---------------------------------------------------------------------------
+
+title: Physics and Prompts
+tagline: Notes from the theory group
+description: >-
+  A communal blog for people working in high-energy theory and quantum gravity,
+  on how AI is changing what it means to do theoretical physics.
+
+url: "https://physicsandprompts.github.io"
+baseurl: ""
+
+# CHANGE THIS before launch. It is the submission address shown on /submit/.
+email: physicsandprompts@example.com
+
+# Optional: shown in the footer. Leave blank to hide.
+github_repo: physicsandprompts/physicsandprompts.github.io
+
+# --- Comments (giscus) ----------------------------------------------------
+# Off until you complete the setup in README.md. Turning it on without the
+# two real IDs below just renders an empty box, so leave enabled:false
+# until you have pasted them in.
+giscus:
+  enabled: false
+  repo: physicsandprompts/physicsandprompts.github.io
+  repo_id: "PASTE_REPO_ID_HERE"
+  category: "Comments"
+  category_id: "PASTE_CATEGORY_ID_HERE"
+  mapping: pathname
+  theme_light: light
+  theme_dark: dark_dimmed
+
+# ---------------------------------------------------------------------------
+# Build wiring. You should not need to touch anything below here.
+# ---------------------------------------------------------------------------
+
+markdown: kramdown
+kramdown:
+  input: GFM              # GitHub-flavoured: stops x_1 y_2 turning into italics
+  math_engine: null       # leave $...$ alone so MathJax can render it client-side
+  syntax_highlighter: rouge
+
+permalink: /posts/:title/
+
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+  - jekyll-sitemap
+
+feed:
+  path: feed.xml
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - README.md
+  - vendor

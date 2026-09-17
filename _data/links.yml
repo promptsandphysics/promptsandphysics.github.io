@@ -1,0 +1,18 @@
+# "Elsewhere" links at the bottom of /newsfeed/.
+# These three are real and checked. Add your own.
+
+- title: Proofs and Prompts
+  url: https://proofsandprompts.com/
+  note: >-
+    The same conversation on the mathematics side, and the direct inspiration
+    for this site. Much of what is argued there transfers.
+
+- title: arXiv hep-th
+  url: https://arxiv.org/list/hep-th/recent
+  note: The daily listing, for context on what is actually being posted.
+
+- title: What's new (Terence Tao)
+  url: https://terrytao.wordpress.com/
+  note: >-
+    Where a good deal of the mathematics-side discussion of AI-assisted research
+    has played out in public.

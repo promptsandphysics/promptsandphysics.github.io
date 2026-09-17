@@ -1,0 +1,28 @@
+# Newsfeed entries, newest sorted first automatically by date.
+#
+# Add an entry:
+#   - date: 2026-09-20
+#     title: What happened
+#     url: https://...          (optional)
+#     summary: A few sentences of context.
+#
+# The two entries below are FORMAT EXAMPLES with no real content. They carry
+# sample:true so they render with an "example" flag. Delete them.
+
+- date: 2026-09-16
+  sample: true
+  title: "Example entry — a preprint, announcement or talk"
+  url: ""
+  summary: >-
+    This is the shape of a newsfeed entry: a date, a headline, an optional link,
+    and two or three sentences saying why a hep-th reader should care. Keep the
+    summary factual and say plainly what is claimed versus what is established.
+
+- date: 2026-09-12
+  sample: true
+  title: "Example entry — a response or open letter"
+  url: ""
+  summary: >-
+    A second example, to show how consecutive entries sit together. Replace both
+    of these with real items before launch, or delete the file's contents
+    entirely and the Newsfeed page will simply render empty.

@@ -1,0 +1,58 @@
+---
+layout: default
+---
+<div class="wrap">
+  <article class="post">
+
+    {%- if page.sample -%}
+    <p class="sample-banner">
+      <strong>Sample post.</strong> Written to show the layout. Delete
+      <code>_posts/{{ page.path | split: "/" | last }}</code> before launch.
+    </p>
+    {%- endif -%}
+
+    <header class="post-head">
+      <p class="post-meta">
+        <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%-d %B %Y" }}</time>
+      </p>
+      <h1 class="post-title">{{ page.title }}</h1>
+      <p class="byline">
+        by
+        {%- if page.author_url %}
+          <a href="{{ page.author_url }}">{{ page.author }}</a>
+        {%- else %}
+          {{ page.author | default: "Anonymous" }}
+        {%- endif -%}
+        {%- if page.affiliation %}<span class="affiliation">{{ page.affiliation }}</span>{% endif -%}
+        {%- if page.career_stage %}<span class="affiliation">{{ page.career_stage }}</span>{% endif -%}
+      </p>
+      {% include taglist.html tags=page.tags %}
+    </header>
+
+    <div class="prose">
+      {{ content }}
+    </div>
+
+    {%- if page.ai_disclosure %}
+    <aside class="disclosure">
+      <h2>AI use disclosure</h2>
+      <p>{{ page.ai_disclosure }}</p>
+    </aside>
+    {%- endif %}
+
+    <nav class="post-nav" aria-label="More posts">
+      {%- if page.previous %}
+      <a class="post-nav-prev" href="{{ page.previous.url | relative_url }}">
+        <span>Previous</span>{{ page.previous.title }}
+      </a>
+      {%- endif %}
+      {%- if page.next %}
+      <a class="post-nav-next" href="{{ page.next.url | relative_url }}">
+        <span>Next</span>{{ page.next.title }}
+      </a>
+      {%- endif %}
+    </nav>
+
+    {%- include comments.html -%}
+  </article>
+</div>

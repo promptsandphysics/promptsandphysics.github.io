@@ -1,0 +1,15 @@
+---
+layout: page
+title: Posts
+permalink: /posts/
+subtitle: Everything published so far, newest first.
+---
+<div class="listing listing-full">
+  {%- for post in site.posts -%}
+    {% include post-card.html post=post %}
+  {%- endfor -%}
+  {%- if site.posts.size == 0 -%}
+    <p class="empty">No posts yet.</p>
+  {%- endif -%}
+</div>
+<p class="more"><a href="{{ '/tags/' | relative_url }}">Browse by tag &rarr;</a></p>
